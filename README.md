@@ -2,32 +2,33 @@ Este Proyecto lo que se esta haciendo es desarrollar una aplicacion movil que cu
 
 Este prepositorio sera temporal ya que esta en faze pruebas.
 
-Dentro de este desarrollo que 
+**Dentro de este desarrollo contiene lo siguente:**
 
-Implementación de Lazy Loading (20%)
+**Implementación de Lazy Loading.**
 
 Crear una página dentro de la aplicación que utilice Lazy Loading para cargarla bajo demanda.
 Asegurarse de que la configuración de las rutas sea correcta y eficiente.
 
-Conexión a un Servicio (20%)
+**Conexión a un Servicio.**
 Implementar un servicio que maneje la lógica de conexión a una API externa.
 El servicio debe inyectarse correctamente en la página.
 
-Conexión a una API 
+**Conexión a una API.**
 De servicio debe conectarse correctamente a una API REST externa.
 Validar las respuestas de la API y mostrar los datos en la página dentro del navegador.
 
 
-Contener persistencia de Datos
+**Contener persistencia de Datos**
 
 Implementar persistencia de datos localmente (puedes utilizar LocalStorage).
 Los datos deben persistir entre reinicios de la aplicación.
 Mostrar los datos obtenidos en un componente
 
-Tipado Fuerte con Interfaces (10%)
+**Tipado Fuerte con Interfaces**
 Implementar tipado fuerte en el proyecto, utilizando interfaces de TypeScript para definir claramente los tipos de datos utilizados en la aplicación.
 
-Integrantes de este desarrollo
-  Alvaro Gonzalez Briones.
-  Gabriel Coindreau.
-  Hector Saavedra.
+**Integrantes de este desarrollo**:
+
+- Alvaro Gonzalez Briones.
+- Gabriel Coindreau.
+- Hector Saavedra.
