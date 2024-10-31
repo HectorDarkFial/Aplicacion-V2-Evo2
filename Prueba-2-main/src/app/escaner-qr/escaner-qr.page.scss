@@ -1,0 +1,157 @@
+ion-segment{
+    margin-top: 20px;
+    } 
+
+    .segment{
+    padding: 30px 5px;
+    }
+
+    .submit{
+    height: 44px;
+    --border-radius: 10px;
+    --background: var(--ion-color-tertiary);
+    }
+
+    .scan-label{
+    margin: 25px 0;
+    }
+
+    img{
+    width: 200px;
+    }
+
+    .result{
+    color: black;
+    border: 1px dashed var(--ion-color-medium);
+    border-radius: 10px;
+    margin: 30px 0;
+
+    p{
+    color: var(--ion-color-tertiary);
+    margin-bottom: 5px;
+    font-size: 11px;
+    }
+
+    h6{
+    margin-top: 0;
+    }
+    }
+
+    ion-button{
+    text-transform: none;
+    }
+
+ion-textarea{
+    --highlight-color-valid: var(--ion-color-tertiary);
+    text-align: start;
+}
+
+    #qrImage{
+    padding: 20px 0;
+    }
+
+    .qr-wrapper{
+    width: 230px; 
+    min-height: 230px;
+    background: var(--ion-color-tertiary); 
+    border-radius: 20px;
+}
+
+    .qr-placeholder{
+    width: 60px; 
+}
+
+.d-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.scan-area {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    margin: 50px auto;
+    background: transparent;
+}
+
+.corner-frame {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 4px solid #00B0FF;
+}
+    /* Botones*/
+.botones-container {
+    margin-top: 200px;  /* o el valor que necesites */
+    /* o */
+    padding-top: 200px;
+}
+
+  /* Esquina superior izquierda */
+.top-left {
+    top: 0;
+    left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+  /* Esquina superior derecha */
+.top-right {
+    top: 0;
+    right: 0;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+  /* Esquina inferior izquierda */
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+  /* Esquina inferior derecha */
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    border-left: 0;
+    border-top: 0;
+}
+
+.scan-window {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid rgba(0, 176, 255, 0.2);
+}
+
+  // Opcional: Añadir una animación de escaneo
+.scan-window::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #00B0FF;
+    animation: scanning 2s linear infinite;
+    box-shadow: 0 0 4px rgba(0, 176, 255, 0.8);
+}
+
+@keyframes scanning {
+    0% {
+    top: 0;
+    }
+    50% {
+    top: 100%;
+    }
+    100% {
+    top: 0;
+    }
+}

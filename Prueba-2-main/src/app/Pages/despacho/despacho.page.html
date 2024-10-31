@@ -1,0 +1,76 @@
+<ion-header>
+  <app-toolbar></app-toolbar>
+  <ion-list>
+  <h2 style="text-align: center;">Despacho</h2>
+    <br>
+    <ion-item>
+      <ion-label>Producto: Aceite</ion-label>
+      <ion-item>
+      <ion-label>Pallet N°: 9995</ion-label>
+    </ion-item>
+      <ion-item>
+      <ion-label>SKU: 567891</ion-label>
+      <ion-checkbox justify="end"></ion-checkbox>
+      </ion-item>
+    </ion-item> 
+    <ion-item>
+      <ion-label>Producto: Aceite</ion-label>
+      <ion-item>
+      <ion-label>Pallet N°: 9995</ion-label>
+    </ion-item>
+      <ion-item>
+      <ion-label>SKU: 567891</ion-label>
+      <ion-checkbox justify="end"></ion-checkbox>
+      </ion-item>
+    </ion-item> 
+    <ion-item>
+      <ion-label>Producto: Aceite</ion-label>
+      <ion-item>
+      <ion-label>Pallet N°: 9995</ion-label>
+    </ion-item>
+      <ion-item>
+      <ion-label>SKU: 567891</ion-label>
+      <ion-checkbox justify="end"></ion-checkbox>
+      </ion-item>
+    </ion-item> 
+    <ion-item>
+      <ion-label>Producto: Aceite</ion-label>
+      <ion-item>
+      <ion-label>Pallet N°: 9995</ion-label>
+    </ion-item>
+      <ion-item>
+      <ion-label>SKU: 567891</ion-label>
+      <ion-checkbox justify="end"></ion-checkbox>
+      </ion-item>
+    </ion-item> 
+    <ion-item>
+      <ion-label>Producto: Aceite</ion-label>
+      <ion-item>
+      <ion-label>Pallet N°: 9995</ion-label>
+    </ion-item>
+      <ion-item>
+      <ion-label>SKU: 567891</ion-label>
+      <ion-checkbox justify="end"></ion-checkbox>
+      </ion-item>
+    </ion-item> 
+    
+    <!-- Este botón transparente que muestra una alerta de confirmación al hacer clic -->
+    <ion-button id="present-alert" fill="clear">Despachar Productos</ion-button>
+    <!-- Aqui cuando se preciona muestra una ventana de alerta personalizada que se activa al presionar el botón anterior -->
+    <ion-alert trigger="present-alert" class="custom-alert" header="¿Confirma despacho?" [buttons]="alertButtons"></ion-alert>
+  </ion-list>
+</ion-header>
+
+<!-- Contenedor para los botones con espacio entre ellos y padding -->
+<div style="display: flex; justify-content: space-between; padding: 10px;">
+
+  <!-- Este botón de Home que muestra loading y navega a la página principal -->
+  <ion-button id="open-loading" (click)="openModal()"routerLink="/home">Inicio</ion-button>
+
+  <!-- Este botón transparente para la función de escaneo -->
+  <ion-button fill="clear" routerLink="/escaner-qr">Escanear</ion-button>
+
+  <!-- En esta parte de codigo sirve para confiurar el indicador de carga que aparece durante 1 segundo -->
+  <ion-loading class="custom-loading" trigger="open-loading" message="Loading..." [duration]="1000"></ion-loading>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-list>
+    <ion-toolbar color="mycolors">
+      <app-toolbar></app-toolbar>
+      <h2 style="text-align: center;">Ingreso de Productos</h2>
+    </ion-toolbar>
+    <br>
+    <ion-item>
+      <ion-label>Producto: Fideo</ion-label>
+      <ion-item>
+      <ion-label>Pallet N°: 9995</ion-label>
+    </ion-item>
+      <ion-item>
+      <ion-label>SKU: 567891</ion-label>
+      <ion-checkbox justify="end"></ion-checkbox>
+      </ion-item>
+    </ion-item>
+    <ion-item>
+      <ion-label>Producto: Aceite</ion-label>
+      <ion-item>
+      <ion-label>Pallet N°: 9995</ion-label>
+    </ion-item>
+      <ion-item>
+      <ion-label>SKU: 567891</ion-label>
+      <ion-checkbox justify="end"></ion-checkbox>
+      </ion-item>
+    </ion-item>
+    <ion-item>
+      <ion-label>Producto: Harina</ion-label>
+      <ion-item>
+      <ion-label>Pallet N°: 9995</ion-label>
+    </ion-item>
+      <ion-item>
+      <ion-label>SKU: 567891</ion-label>
+      <ion-checkbox justify="end"></ion-checkbox>
+      </ion-item>
+    </ion-item>
+    <ion-item>
+      <ion-label>Producto: Arroz</ion-label>
+      <ion-item>  
+      <ion-label>Pallet N°: 9995</ion-label>
+    </ion-item>
+      <ion-item>
+      <ion-label>SKU: Aceite</ion-label>
+      <ion-checkbox justify="end"></ion-checkbox>
+      </ion-item>
+    </ion-item>  
+
+    <!-- Botón transparente que al hacer clic mostrará una alerta para confirmar el ingreso de productos -->
+    <ion-button id="present-alert" fill="clear">Ingresar Productos</ion-button>
+
+    <!-- Esta alerta de confirmación que se muestra al presionar el botón anterior
+    - Se dispara cuando se presiona el botón con id="present-alert"
+    - Muestra el mensaje "¿Confirma Ingreso?"
+    - Los botones se definen en el archivo .ts como alertButtons -->
+    <ion-alert trigger="present-alert" class="custom-alert" header="¿Confirma Ingreso?" [buttons]="alertButtons"></ion-alert>
+  </ion-list>
+</ion-header>
+
+<!-- Contenedor div que usa flexbox para acomodar los botones horizontalmente -->
+<div style="display: flex; justify-content: space-between; padding: 10px;">
+
+  <ion-button id="open-loading" (click)="openModal()"routerLink="/home">Inicio</ion-button>
+  <ion-button fill="clear" routerLink="/escaner-qr">Escanear</ion-button>
+  <ion-loading class="custom-loading" trigger="open-loading" message="Loading..." [duration]="1000"></ion-loading>
+      <!-- Botón de inicio que al presionarse:
+        - Muestra un loading
+        - Ejecuta la función openModal()
+        - Navega a la ruta /home -->
+</div> 
+<app-footer></app-footer>

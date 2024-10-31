@@ -1,0 +1,54 @@
+<ion-header>
+  <app-toolbar></app-toolbar>
+  <ion-toolbar>
+    <ion-title> Escaner QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+
+  <!-- Dentro de este trozo de codigo lo que se esta haciendo es que se esta entre enlazando llamandolo (ts = segment = scan) -->
+  <ion-segment [(ngModel)]="segment" mode="ios">
+    <ion-segment-button value="scan">
+      <ion-label>Escanear QR</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="manual">
+      <ion-label>Introducir code manual</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  
+      <!-- En el div lo que esta haciendo crear dentro una estructura para simular que se estara haciendo un scaneo -->
+  <div *ngIf="segment === 'scan'"  class="scan-area">
+
+    <!-- Esquinas del marco -->
+    <div class="corner-frame top-left"></div>
+    <div class="corner-frame top-right"></div>
+    <div class="corner-frame bottom-left"></div>
+    <div class="corner-frame bottom-right"></div>
+
+    <div class="scan-window"></div>
+  </div>
+
+  <!--Aqui es donde se ingresa el codigo manual -->
+  <div class="qrSegment" *ngIf="segment === 'manual'">
+    <br>
+    <h1> Ingresar Code </h1>
+    <br>
+    <input type="text" name="" id="">
+  </div>
+
+  <br>
+  <br>
+
+  <div >
+    <!-- Este botón de Home que muestra loading y navega a la página principal -->
+    <ion-button id="open-loading" routerLink="/home">Inicio</ion-button>
+    
+    <!-- En esta parte de codigo sirve para confiurar el indicador de carga que aparece durante 1 segundo -->
+    <ion-loading class="custom-loading" trigger="open-loading" message="Loading..." [duration]="1000"></ion-loading>
+  </div>
+
+</ion-content>
+<app-footer></app-footer>
